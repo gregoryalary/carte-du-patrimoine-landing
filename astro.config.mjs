@@ -6,4 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   compressHTML: true,
+  site: 'https://carte-du-patrimoine.gregoryalary.dev',
 });
