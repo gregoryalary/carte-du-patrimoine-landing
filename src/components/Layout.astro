@@ -12,9 +12,33 @@ const { title, description, schema } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<title>{title} | Carte du patrimoine</title>
         <meta name="description" content={description}/>
-        <style>
+        <style is:inline>
+            @keyframes spin-reverse {
+                to {
+                    transform: rotate(-1turn)
+                }
+            }
+
+            @keyframes spin {
+                to {
+                    transform: rotate(1turn)
+                }
+            }
+
+            .animate-spin-reverse-slow {
+                animation: spin-reverse 4s linear infinite
+            }
+
+            .animate-spin-reverse-slower {
+                animation: spin-reverse 6s linear infinite
+            }
+
             .animate-spin-slow {
-                animation: spin 4s linear infinite;
+                animation: spin 4s linear infinite
+            }
+            
+            .animate-spin-slower {
+                animation: spin 6s linear infinite
             }
         </style>
         {schema && (

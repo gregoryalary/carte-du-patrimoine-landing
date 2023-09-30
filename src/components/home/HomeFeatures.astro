@@ -39,6 +39,18 @@ const features = [
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:mt-20">
       <div class="grid grid-cols-12 items-center lg:gap-16 xl:gap-24">
         <div class="relative col-span-12 md:col-span-6 mb-8 lg:mb-0">
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <svg viewBox="0 0 558 558" width="558" height="558" fill="none" aria-hidden="true" class="hidden lg:block animate-spin-slower">
+              <defs>
+                <linearGradient id="feature-gradient" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#c21d37"></stop>
+                  <stop offset="1" stop-color="#c21d37" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+              <path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#D4D4D4"></path>
+              <path d="M1 279C1 125.465 125.465 1 279 1" stroke-width="2" stroke="url(#feature-gradient)" stroke-linecap="round"></path>
+            </svg>
+          </div>
           <div class="relative aspect-[512/1081] mx-auto max-w-[250px] lg:max-w-[366px]">
             <Image src={Feature1Image} alt="Une capture d'écran de l'application Carte du Patrimoine présentant l'Hôtel de Bardines" width={500} class="w-[250px] lg:w-[366px]" />
           </div>
