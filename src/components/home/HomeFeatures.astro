@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+
+import Feature1Image from '../../images/feature-1.png';
+
+const features = [
+  {
+    title: 'Carte exhaustive et interactive',
+    text: "La carte de l'application vous présente tous les Monuments Historiques classés et géolocalisés. Découvrez aussi une carte en trois dimensions pour mieux repérer les bâtiments autour de vous.",
+    iconPath: 'M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z'
+  },
+  {
+    title: "Illustrations et informations",
+    text: "L'application vous permet d'accéder à une large bibliothèque d'images et d'informations à propos des bâtiments.",
+    iconPath: "M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+  },
+  {
+    title: 'Recherche',
+    text: "Pour rendre votre exploration encore plus facile, notre application dispose d'une fonction de recherche par mots-clés. Vous pouvez ainsi trouver rapidement les monuments qui vous intéressent en utilisant des termes spécifiques liés à l'histoire, à l'architecture ou à la région.",
+    iconPath: "M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+  },
+];
+---
+
+<section id="fonctionnalites" class="bg-gray-900 py-20 sm:py-32">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+      <h2 class="text-3xl font-medium tracking-tight text-white">
+        Fonctionnalités
+      </h2>
+      <p class="mt-2 text-lg text-gray-400">
+        L'application Carte du Patrimoine a été pensée pour être simple d'utilisation et exhaustive
+        pour vous permettre d'accéder à la richesse du patrimoine français.<br/>
+        Que ce soit lors d'un voyage ou pour mieux connaître votre région, Carte du Patrimoine saura satisfaire votre curiosité.
+      </p>
+    </div>
+  </div>
+  <div class="mt-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 md:mt-20">
+      <div class="grid grid-cols-12 items-center lg:gap-16 xl:gap-24">
+        <div class="relative col-span-12 md:col-span-6 mb-8 lg:mb-0">
+          <div class="relative aspect-[512/1081] mx-auto max-w-[250px] lg:max-w-[366px]">
+            <Image src={Feature1Image} alt="Une capture d'écran de l'application Carte du Patrimoine présentant l'Hôtel de Bardines" width={500} class="w-[250px] lg:w-[366px]" />
+          </div>
+        </div>
+        <div class="relative z-10 order-last col-span-12 md:col-span-6 space-y-6">
+          {features.map(feature => (
+            <div class="relative">
+              <div class="relative z-10 p-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-400">
+                  <path stroke-linecap="round" stroke-linejoin="round" d={feature.iconPath} />
+                </svg>            
+                <h3 class="mt-6 text-lg font-semibold text-white">
+                  {feature.title}
+                </h3>
+                <p class="mt-2 text-sm text-gray-400">
+                  {feature.text}
+                </p>
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  </div>
+</section>
