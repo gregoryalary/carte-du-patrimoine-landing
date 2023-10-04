@@ -13,12 +13,24 @@ import HeroImage from '../../images/hero.png';
           <h1 class="text-4xl font-medium tracking-tight text-gray-900 text-center lg:text-left">
             L'application pour découvrir les Monuments Historiques français
           </h1>
+
+          <div class="mt-8 flex flex-wrap gap-x-6 gap-y-4 justify-center lg:hidden">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mhmap">
+              <img
+                class="h-16"
+                alt='Disponible sur Google Play'
+                src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'
+              />
+            </a>
+          </div>
+
           <p class="mt-6 text-lg text-gray-600 text-center lg:text-left">
             L'application <span class="font-semibold">Carte du Patrimoine</span> vous permet de découvrir la carte de France des Monuments Historiques.
             <br/>
             <br/>
             En quelques instants, parcourez la liste officielle des bâtiments classés au titre des Monuments Historiques et accédez à une large collection de <span class="font-semibold">photographies</span> et d'<span class="font-semibold">informations détaillées</span>. 
           </p>
+          
           <div class="grid mt-8 grid-cols-12 gap-8">
             <div class="flex flex-col col-span-12 lg:col-span-6 items-center lg:items-start">
               <span class="text-3xl font-medium tracking-tight text-gray-900 font-bold">45.000+</span>
@@ -29,7 +41,8 @@ import HeroImage from '../../images/hero.png';
               <span class="mt-2 text-lg text-gray-600">Images disponibles</span>
             </div>
           </div>
-          <div class="mt-8 flex flex-wrap gap-x-6 gap-y-4 justify-center lg:justify-start">
+
+          <div class="mt-8 hidden lg:flex flex-wrap gap-x-6 gap-y-4 justify-start">
             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mhmap">
               <img
                 class="h-16"
@@ -38,6 +51,7 @@ import HeroImage from '../../images/hero.png';
               />
             </a>
           </div>
+
         </div>
         <div class="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
           <HomeHeroSpinner />
