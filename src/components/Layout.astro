@@ -18,10 +18,9 @@ const { title, description, schema } = Astro.props;
         <!-- Twitter -->
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@CartePatrimoine" />
-        <meta property="og:url" content="http://carte-du-patrimoine.gregoryalary.dev" />
-        <meta property="og:title" content="L'application pour découvrir les Monuments Historiques français" />
-        <meta property="og:description" content="L'application Carte du Patrimoine vous permet de découvrir la carte de France des Monuments Historiques. 45.000+ bâtiments repertoriés / 200.000+ Images disponibles"  />
-        <meta property="og:image" content={TwitterCardImage.src} />
+        <meta name="twitter:title" content="L'application pour découvrir les Monuments Historiques français">
+        <meta name="twitter:description" content="Carte du Patrimoine vous permet de découvrir la carte de France des Monuments Historiques. 45.000+ bâtiments repertoriés / 200.000+ Images disponibles">
+        <meta name="twitter:image" content={TwitterCardImage.src}>
         
         <style is:inline>
             @keyframes spin-reverse {
