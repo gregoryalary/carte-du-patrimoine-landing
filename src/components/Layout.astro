@@ -2,6 +2,8 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+import TwitterCardImage from '../images/twitter-card.png';
+
 const { title, description, schema } = Astro.props;
 ---
 
@@ -12,6 +14,15 @@ const { title, description, schema } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<title>{title} | Carte du patrimoine</title>
         <meta name="description" content={description}/>
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@CartePatrimoine" />
+        <meta property="og:url" content="http://carte-du-patrimoine.gregoryalary.dev" />
+        <meta property="og:title" content="L'application pour découvrir les Monuments Historiques français" />
+        <meta property="og:description" content="L'application Carte du Patrimoine vous permet de découvrir la carte de France des Monuments Historiques. 45.000+ bâtiments repertoriés / 200.000+ Images disponibles"  />
+        <meta property="og:image" content={TwitterCardImage.src} />
+        
         <style is:inline>
             @keyframes spin-reverse {
                 to {
