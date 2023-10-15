@@ -52,9 +52,20 @@ const { title, description, schema } = Astro.props;
                 animation: spin 6s linear infinite
             }
         </style>
+
         {schema && (
             <script type="application/ld+json" set:html={JSON.stringify(schema)} />
         )}
+
+        <!-- GAnalytics -->
+        <!-- Google tag (gtag.js) -->
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FY8BQ8LNLY"></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FY8BQ8LNLY');
+        </script>
 	</head>
 	<body>
         <Header />
