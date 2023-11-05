@@ -14,7 +14,7 @@ const { title, description, schema } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<title>{title} | Carte du patrimoine</title>
         <meta name="description" content={description}/>
-
+        
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@CartePatrimoine" />
@@ -25,48 +25,31 @@ const { title, description, schema } = Astro.props;
         <meta name="twitter:image" content={`https://carte-du-patrimoine.gregoryalary.dev${TwitterCardImage.src}`}>
         <meta property="og:image" content={`https://carte-du-patrimoine.gregoryalary.dev${TwitterCardImage.src}`} />
 
-        <style is:inline>
-            @keyframes spin-reverse {
-                to {
-                    transform: rotate(-1turn)
-                }
-            }
-
-            @keyframes spin {
-                to {
-                    transform: rotate(1turn)
-                }
-            }
-
-            .animate-spin-reverse-slow {
-                animation: spin-reverse 4s linear infinite
-            }
-
-            .animate-spin-reverse-slower {
-                animation: spin-reverse 6s linear infinite
-            }
-
-            .animate-spin-slow {
-                animation: spin 4s linear infinite
-            }
-            
-            .animate-spin-slower {
-                animation: spin 6s linear infinite
-            }
-        </style>
+        <style is:inline>@keyframes spin-reverse{to{transform:rotate(-1turn)}}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin-reverse-slow{animation:4s linear infinite spin-reverse}.animate-spin-reverse-slower{animation:6s linear infinite spin-reverse}.animate-spin-slow{animation:4s linear infinite spin}.animate-spin-slower{animation:6s linear infinite spin}</style>
 
         {schema && (
             <script type="application/ld+json" set:html={JSON.stringify(schema)} />
         )}
 
         <!-- GAnalytics -->
-        <!-- Google tag (gtag.js) -->
         <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FY8BQ8LNLY"></script>
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-FY8BQ8LNLY');
+        </script>
+
+        <!-- Hotjar -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:3722975,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         </script>
 	</head>
 	<body>
