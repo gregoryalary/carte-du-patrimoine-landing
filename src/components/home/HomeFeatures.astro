@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import Feature1Image from '../../images/feature-1.png';
+import FeatureImage from '../../images/feature.png';
 
 const features = [
   {
@@ -22,7 +22,7 @@ const features = [
 ];
 ---
 
-<section id="fonctionnalites" class="bg-gray-900 py-20 sm:py-32">
+<section id="fonctionnalites" class="bg-black py-20 sm:py-32">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
       <h2 class="text-3xl font-medium tracking-tight text-white">
@@ -43,16 +43,16 @@ const features = [
             <svg viewBox="0 0 558 558" width="558" height="558" fill="none" aria-hidden="true" class="hidden lg:block animate-spin-slower">
               <defs>
                 <linearGradient id="feature-gradient" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#c21d37"></stop>
-                  <stop offset="1" stop-color="#c21d37" stop-opacity="0"></stop>
+                  <stop stop-color="#C67C4E"></stop>
+                  <stop offset="1" stop-color="#C67C4E" stop-opacity="0"></stop>
                 </linearGradient>
               </defs>
               <path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#D4D4D4"></path>
               <path d="M1 279C1 125.465 125.465 1 279 1" stroke-width="2" stroke="url(#feature-gradient)" stroke-linecap="round"></path>
             </svg>
           </div>
-          <div class="relative aspect-[512/1081] mx-auto max-w-[250px] lg:max-w-[366px]">
-            <Image src={Feature1Image} alt="Une capture d'écran de l'application Carte du Patrimoine présentant l'Hôtel de Bardines" width={500} class="w-[250px] lg:w-[366px]" />
+          <div class="relative mx-auto max-w-[450px]">
+            <Image src={FeatureImage} alt="Une capture d'écran de l'application Carte du Patrimoine présentant l'Hôtel de Bardines" width={450} class="w-[450px]" />
           </div>
         </div>
         <div class="relative z-10 order-last col-span-12 md:col-span-6 space-y-6">
