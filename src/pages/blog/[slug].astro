@@ -4,6 +4,7 @@ import { Image, getImage } from 'astro:assets';
 
 import Layout from "../../components/Layout.astro";
 import PostDate from "../../components/blog/PostDate.astro";
+import PostDownloadCta from "../../components/blog/PostDownloadCta.astro";
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
@@ -63,6 +64,8 @@ const relatedPosts = (await getCollection('posts'))
       />
   </div>
 
+  <PostDownloadCta />
+
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 md:mt-0">
     <div class="flex max-w-screen-xl flex-col gap-12 px-5 md:flex-row">
       <article class="flex-1 md:pt-10">
@@ -75,7 +78,7 @@ const relatedPosts = (await getCollection('posts'))
             <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
           </svg>          
           <p class="text-gray-500 text-sm">
-            Les photographies présentées dans cet article sont issues de la <a href="https://www.pop.culture.gouv.fr/" class="font-bold underline">Plateforme ouverte du patrimoine (POP)</a> du ministère de la Culture français. Cette plateforme met à disposition des images et documents relatifs au patrimoine culturel et historique de la France. Les images utilisées ici, sous droits d'auteur, visent à enrichir le contenu de l'article et à offrir une représentation visuelle authentique des monuments historiques, dans un but informatif et éducatif.
+            Les photographies présentées dans cet article sont issues de la <a href="https://www.pop.culture.gouv.fr/" class="font-bold underline">Plateforme ouverte du patrimoine (POP)</a> du ministère de la Culture français.<br/>Les images utilisées ici, sous droits d'auteur, visent à enrichir le contenu de l'article.
           </p>
         </div>
 
@@ -85,7 +88,7 @@ const relatedPosts = (await getCollection('posts'))
           </a>
         </div>
       </article>
-      <aside class="sticky top-0 w-full self-start md:w-80 md:pt-10">
+      <aside class="sticky top-0 w-full self-start md:w-80 md:pt-10 mb-8">
         <h2 class="text-2xl font-bold dark:text-white">Lisez aussi</h2>
         {relatedPosts.map(relatedPost => (
           <div class="grid gap-6 mt-6">
@@ -114,5 +117,9 @@ const relatedPosts = (await getCollection('posts'))
         ))}
       </aside>
     </div>
+  </div>
+
+  <div class="mb-8">
+    <PostDownloadCta />
   </div>
 </Layout>

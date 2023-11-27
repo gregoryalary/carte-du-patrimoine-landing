@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+
+import HomeHeroSpinner from "../home/HomeHeroSpinner.astro";
+
+import HeroImage from "../../images/hero.png";
+import FeatureImage from "../../images/feature.png";
+---
+
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8">
+  <a href="https://play.google.com/store/apps/details?id=com.mhmap" target="_blank">
+    <div class="rounded-xl bg-gray-50 overflow-hidden hover:shadow-xl transition-all duration-250">
+      <div class="overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px pt-8">
+          <div class="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
+            <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
+              <h2 class="text-4xl font-medium tracking-tight text-gray-900 text-center lg:text-left">
+                L'application pour découvrir les Monuments Historiques français
+              </h2>
+
+              <div class="mt-8 flex flex-wrap gap-x-6 gap-y-4 justify-center lg:hidden">
+                <img
+                  class="h-16"
+                  alt="Disponible sur Google Play"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png"
+                />
+              </div>
+
+              <div class="grid mt-8 gap-8 hidden md:flex justify-center lg:justify-start">
+                <div class="flex flex-col items-center lg:items-start">
+                  <span class="text-3xl font-medium tracking-tight text-gray-900 font-bold">45.000+</span>
+                  <span class="mt-2 text-lg text-gray-600">Monuments repertoriés</span>
+                </div>
+                <div class="flex flex-col items-start items-center lg:items-start">
+                  <span class="text-3xl font-medium tracking-tight text-gray-900 font-bold">200.000+</span>
+                  <span class="mt-2 text-lg text-gray-600">Images disponibles</span>
+                </div>
+              </div>
+
+              <div class="mt-8 hidden lg:flex flex-wrap gap-x-6 gap-y-4 justify-start">
+                <img
+                  class="h-16"
+                  alt="Disponible sur Google Play"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png"
+                />
+              </div>
+            </div>
+            <div class="relative mt-10 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
+              <HomeHeroSpinner />
+              <div class={`-mx-4 h-[350px] sm:mx-0`}>
+                <div class="relative mx-auto flex flex-row justify-center lg:justify-end gap-8">
+                  <Image
+                    src={HeroImage}
+                    alt="Une capture d'écran de l'application Carte du Patrimoine présentant les informations d'un château à Montiganc-Charente"
+                    width={250}
+                  />
+                  <Image
+                    src={FeatureImage}
+                    alt="Une capture d'écran de l'application Carte du Patrimoine présentant les informations d'un château à Montiganc-Charente"
+                    width={250}
+                    class="hidden xl:flex"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
