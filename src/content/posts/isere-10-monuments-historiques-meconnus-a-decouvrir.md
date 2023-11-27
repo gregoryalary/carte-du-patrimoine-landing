@@ -2,7 +2,7 @@
 title: "Isère : 10 monuments historiques méconnus a découvrir"
 image: "../../images/posts/isere.webp"
 publishedAt: 2023-11-26
-description: "Découvrez 10 monuments historiques méconnus en Isère, France, dans des localités telles que Chatte, Gières, Renage, Voiron, Grenoble, Vif, Mayres-Savel, Huez, et Châtenay, révélant la richesse du patrimoine architectural et historique de cette région"
+description: "Découvrez 10 monuments historiques méconnus en Isère, France, dans des localités telles que Chatte, Gières, Renage, Voiron, Grenoble, Vif, Mayres-Savel, Huez, et Châtenay."
 ---
 
 ## Usine de Moulinage de la Soie de la Galicière à Chatte
