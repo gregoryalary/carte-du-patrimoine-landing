@@ -1,0 +1,17 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+import {formatDateForHuman, formatDateForBrowser} from "../../utils/date.util";
+
+type Props = {
+    post: CollectionEntry<"posts">,
+    className: string,
+};
+
+const { post, className } = Astro.props;
+---
+
+<time class={className} datetime={formatDateForBrowser(post.data.publishedAt)}>
+    {formatDateForHuman(post.data.publishedAt)}
+</time>
+

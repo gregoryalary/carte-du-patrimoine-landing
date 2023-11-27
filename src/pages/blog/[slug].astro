@@ -1,0 +1,118 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import { Image, getImage } from 'astro:assets';
+
+import Layout from "../../components/Layout.astro";
+import PostDate from "../../components/blog/PostDate.astro";
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection("posts");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+};
+
+type Props = {
+  post: CollectionEntry<"posts">;
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const relatedPosts = (await getCollection('posts'))
+  .filter(p => p.slug !== post.slug)
+  .sort(() => Math.random())
+  .slice(0, 3);
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  image={`https://carte-du-patrimoine.gregoryalary.dev${(await getImage({src: post.data.image})).src}`}
+  schema={{
+    "@context": "https://schema.org/",
+    "@type": "BlogPosting",
+    name: post.data.title,
+    genre: "Tourism",
+    url: Astro.url,
+    description: post.data.description,
+    datePublished: post.data.publishedAt,
+  }}
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h1 class="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
+      {post.data.title}
+    </h1>
+
+    <div class="mt-3 flex justify-center space-x-3 text-gray-500 ">
+      <div class="flex items-center space-x-2 text-sm">
+        <PostDate className="text-gray-500 dark:text-gray-400" post={post} />
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8 flex justify-center z-0 mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
+    <Image
+      src={post.data.image}
+      alt={post.data.title}
+      width={1024}
+      loading="eager"
+      sizes="100vw"
+      class="object-cover rounded bg-gray-100"
+      />
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 md:mt-0">
+    <div class="flex max-w-screen-xl flex-col gap-12 px-5 md:flex-row">
+      <article class="flex-1 md:pt-10">
+        <div class="prose mb-3 pb-5 max-w-none prose-img:rounded-xl">
+          <Content />
+        </div>
+
+        <div class="bg-blue-100 border-l-4 border-blue-200 px-4 py-3 text-blue-500 rounded-r-lg" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+          </svg>          
+          <p class="text-gray-500 text-sm">
+            Les photographies présentées dans cet article sont issues de la <a href="https://www.pop.culture.gouv.fr/" class="font-bold underline">Plateforme ouverte du patrimoine (POP)</a> du ministère de la Culture français. Cette plateforme met à disposition des images et documents relatifs au patrimoine culturel et historique de la France. Les images utilisées ici, sous droits d'auteur, visent à enrichir le contenu de l'article et à offrir une représentation visuelle authentique des monuments historiques, dans un but informatif et éducatif.
+          </p>
+        </div>
+
+        <div class="mb-7 mt-7 flex justify-center">
+          <a href="/blog" class="rounded-full px-5 py-2 text-sm text-blue-600 dark:text-blue-500">
+            ← Voir tous les articles du blog
+          </a>
+        </div>
+      </article>
+      <aside class="sticky top-0 w-full self-start md:w-80 md:pt-10">
+        <h2 class="text-2xl font-bold dark:text-white">Lisez aussi</h2>
+        {relatedPosts.map(relatedPost => (
+          <div class="grid gap-6 mt-6">
+            <a href={`/blog/${relatedPost.slug}`}>
+              <div class="flex gap-5">
+                <div class="relative w-24 overflow-hidden rounded-md shrink-0 bg-gray-100">
+                  <Image
+                    quality="high"
+                    width="96"
+                    src={relatedPost.data.image}
+                    alt={relatedPost.data.title}
+                    sizes="100vw"
+                    class="object-cover absolute h-full w-full"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <h3 class="font-medium dark:text-white">
+                    {relatedPost.data.title}
+                  </h3>
+                  <PostDate post={relatedPost} className="mt-2 text-sm text-gray-500" />
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </aside>
+    </div>
+  </div>
+</Layout>

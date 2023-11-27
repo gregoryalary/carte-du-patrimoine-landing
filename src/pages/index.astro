@@ -4,12 +4,14 @@ import HomeFaq from "../components/home/HomeFaq.astro";
 import HomeFeatures from "../components/home/HomeFeatures.astro";
 import HomeHero from "../components/home/HomeHero.astro";
 
+import TwitterCardImage from '../images/twitter-card.png';
 import AppIconImage from '../images/app-icon.png'
 ---
 
 <Layout
   title="L'application pour découvrir les Monuments Historiques français"
   description="Découvrez la France des Monuments Historiques : 45 000+ bâtiments classés, photos et infos détaillées avec l'application Carte du Patrimoine."
+  image={`https://carte-du-patrimoine.gregoryalary.dev${TwitterCardImage.src}`}
   schema={
     {
       "@context": "http://schema.org",

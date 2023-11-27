@@ -2,9 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-import TwitterCardImage from '../images/twitter-card.png';
-
-const { title, description, schema } = Astro.props;
+const { title, description, schema, image } = Astro.props;
 ---
 
 <html lang="fr">
@@ -15,15 +13,18 @@ const { title, description, schema } = Astro.props;
 		<title>{title} | Carte du patrimoine</title>
         <meta name="description" content={description}/>
         
-        <!-- Twitter -->
+        <!-- OG / Twitter -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@CartePatrimoine" />
         <meta name="twitter:domain" content="carte-du-patrimoine.gregoryalary.dev">
-        <meta name="twitter:url" content="https://carte-du-patrimoine.gregoryalary.dev/">
-        <meta name="twitter:title" content="L'application pour découvrir les Monuments Historiques français">
-        <meta name="twitter:description" content="Carte du Patrimoine vous permet de découvrir la carte de France des Monuments Historiques. 45.000+ bâtiments repertoriés / 200.000+ Images disponibles">
-        <meta name="twitter:image" content={`https://carte-du-patrimoine.gregoryalary.dev${TwitterCardImage.src}`}>
-        <meta property="og:image" content={`https://carte-du-patrimoine.gregoryalary.dev${TwitterCardImage.src}`} />
+        <meta name="twitter:title" content={title} />
+        <meta property="og:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:url" content={Astro.url} />
+        <meta property="og:url" content={Astro.url} />
+        <meta name="twitter:image" content={image} />
+        <meta property="og:image" content={image} />
 
         <style is:inline>@keyframes spin-reverse{to{transform:rotate(-1turn)}}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin-reverse-slow{animation:4s linear infinite spin-reverse}.animate-spin-reverse-slower{animation:6s linear infinite spin-reverse}.animate-spin-slow{animation:4s linear infinite spin}.animate-spin-slower{animation:6s linear infinite spin}</style>
 
@@ -31,26 +32,25 @@ const { title, description, schema } = Astro.props;
             <script type="application/ld+json" set:html={JSON.stringify(schema)} />
         )}
 
-        <!-- GAnalytics -->
-        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FY8BQ8LNLY"></script>
-        <script is:inline>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-FY8BQ8LNLY');
-        </script>
-
-        <!-- Hotjar -->
-        <script is:inline>
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:3722975,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script>
+        {import.meta.env.MODE === 'production' && (
+            <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-FY8BQ8LNLY"></script>
+            <script is:inline>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-FY8BQ8LNLY');
+            </script>
+            <script is:inline>
+                (function(h,o,t,j,a,r){
+                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                    h._hjSettings={hjid:3722975,hjsv:6};
+                    a=o.getElementsByTagName('head')[0];
+                    r=o.createElement('script');r.async=1;
+                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                    a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            </script>
+        )}
 	</head>
 	<body>
         <Header />
