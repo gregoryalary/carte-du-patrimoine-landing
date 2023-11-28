@@ -3,6 +3,7 @@ title: "Lozère : 10 monuments historiques méconnus a découvrir"
 image: "../../images/posts/lozere.webp"
 publishedAt: 2023-11-24
 description: "Découvrez 10 monuments historiques méconnus à travers Lozère, dont Chambon-le-Château, La Bastide-Puylaurent, Mende, Fontans, Ispagnac, Prévenchères, et Marvejols."
+showPopCopyrights: true
 ---
 
 ## Château du Fort - Chambon-le-Château, Lozère

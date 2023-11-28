@@ -3,6 +3,7 @@ title: "Aveyron : 10 monuments historiques méconnus a découvrir"
 image: "../../images/posts/aveyron.webp"
 publishedAt: 2023-11-25
 description: "Découvrez 10 monuments historiques méconnus à travers l'Aveyron, France, dans des localités telles que Flavin, Villefranche-de-Rouergue, Peyrusse-le-Roc, Estaing, Rodez, Saint-Beauzély, Lavernhe, et Viala-du-Pas-de-Jaux."
+showPopCopyrights: true
 ---
 
 ## Ancienne Église de Flavin

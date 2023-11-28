@@ -3,6 +3,7 @@ title: "Drôme : 10 monuments historiques méconnus a découvrir"
 image: "../../images/posts/drome.png"
 publishedAt: 2023-11-25
 description: "Découvrez 10 monuments historiques méconnus à travers la Drôme, dans des localités telles que Saint-Donat-sur-l'Herbasse, Saint-Paul-Trois-Châteaux, Cléon-d'Andran, Miribel, Grignan, Pontaix, Savasse, Châteauneuf-de-Galaure, et La Baume-de-Transit."
+showPopCopyrights: true
 ---
 
 ## Chapelle dite Chapelle des Evêques - Saint-Donat-sur-l'Herbasse

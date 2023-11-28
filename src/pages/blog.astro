@@ -24,13 +24,13 @@ const posts = await getCollection("posts");
         {posts.map(post => (
           <div class="group cursor-pointer">
             <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105">
-              <a href={`/blog/${post.slug}`} class="aspect-square">
+              <a href={`/blog/${post.slug}`}>
                 <Image
                   src={post.data.image}
                   alt={post.data.title}
                   quality="high"
                   width={450}
-                  class="object-cover transition-all h-full w-full transparent"
+                  class="object-cover transition-all h-full w-full transparent aspect-[16/9]"
                   sizes="(max-width: 768px) 30vw, 33vw"
                   loading="lazy"
                 />

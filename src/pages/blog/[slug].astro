@@ -73,14 +73,16 @@ const relatedPosts = (await getCollection('posts'))
           <Content />
         </div>
 
-        <div class="bg-blue-100 border-l-4 border-blue-200 px-4 py-3 text-blue-500 rounded-r-lg" role="alert">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-          </svg>          
-          <p class="text-gray-500 text-sm">
-            Les photographies présentées dans cet article sont issues de la <a href="https://www.pop.culture.gouv.fr/" class="font-bold underline">Plateforme ouverte du patrimoine (POP)</a> du ministère de la Culture français.<br/>Les images utilisées ici, sous droits d'auteur, visent à enrichir le contenu de l'article.
-          </p>
-        </div>
+        {post.data.showPopCopyrights && (
+          <div class="bg-blue-100 border-l-4 border-blue-200 px-4 py-3 text-blue-500 rounded-r-lg" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+            </svg>          
+            <p class="text-gray-500 text-sm">
+              Les photographies présentées dans cet article sont issues de la <a href="https://www.pop.culture.gouv.fr/" class="font-bold underline">Plateforme ouverte du patrimoine (POP)</a> du ministère de la Culture français.<br/>Les images utilisées ici, sous droits d'auteur, visent à enrichir le contenu de l'article.
+            </p>
+          </div>
+        )}
 
         <div class="mb-7 mt-7 flex justify-center">
           <a href="/blog" class="rounded-full px-5 py-2 text-sm text-blue-600">
