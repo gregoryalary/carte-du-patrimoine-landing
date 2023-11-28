@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://carte-du-patrimoine.gregoryalary.dev/sitemap.xml
+Sitemap: https://carte-du-patrimoine.gregoryalary.dev/sitemap-index.xml
