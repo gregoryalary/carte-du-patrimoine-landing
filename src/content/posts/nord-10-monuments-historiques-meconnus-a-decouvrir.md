@@ -1,63 +1,63 @@
 ---
-title: "Oise : 10 monuments historiques méconnus a découvrir"
-image: "../../images/posts/oise.webp"
-publishedAt: 2023-11-28
-description: "Découvrez 10 monuments historiques méconnus à travers l'Oise, France, dans des localités telles que Compiègne, Berneuil-en-Bray, Lachapelle-sous-Gerberoy, et Pont-Sainte-Maxence."
+title: "Nord : 10 monuments historiques méconnus a découvrir"
+image: "../../images/posts/nord.webp"
+publishedAt: 2023-11-29
+description: "Découvrez 10 monuments historiques méconnus à travers l'Aveyron, France, dans des localités telles que Flavin, Villefranche-de-Rouergue, Peyrusse-le-Roc, Estaing, Rodez, Saint-Beauzély, Lavernhe, et Viala-du-Pas-de-Jaux."
 showPopCopyrights: true
 ---
 
-# Château d'eau de Chamant
+## Moulin et Maison du Meunier à Halluin
 
-![Château d'eau de Chamant](https://p.monumentum.fr/main/60/pa60000014-chamant-chateau-deau.jpg)
+![Vue générale du moulin](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP12R070291/12r070291.jpg)
 
-Situé dans la forêt d'Halatte, le Château d'eau de Chamant est une construction remarquable et unique en son genre dans le nord de la France. Cette structure métallique, haute de 30 mètres, est emblématique de l'architecture de fer du 19e siècle. Sa conception est attribuée à un des élèves de Gustave Eiffel, ce qui ajoute une dimension historique et culturelle significative à cet édifice.
+Le moulin Hollebeke à Halluin est un exemple fascinant d'ingénierie industrielle du 19e siècle. Construit entre 1877 et 1879, ce moulin de type néerlandais se distingue par sa structure tronconique en brique, avec une plate-forme circulaire en bois. Ses ailes, restaurées en 1992, témoignent de l'évolution technologique avec l'adjonction d'une machine à vapeur auxiliaire en 1888. Ce moulin à farine, inscrit au titre des monuments historiques le 17 février 1989, représente un aspect clé du patrimoine industriel de la région. La maison du meunier, avec ses façades caractéristiques, complète ce tableau d'une époque où les moulins jouaient un rôle central dans les communautés locales.
 
-Le château d'eau est composé d'une cuve en plaques de tôle boulonnées, supportée par six piliers en acier laminé. Ce design ingénieux non seulement reflète l'innovation technique de l'époque mais offre également une esthétique industrielle unique. Le sommet de la structure est couronné par un petit belvédère, d'où l'on peut jouir d'une vue panoramique impressionnante sur la forêt environnante.
+## Ruines Gallo-Romaines à Bavay
 
-Construit aux alentours de 1895, le château d'eau avait pour objectif initial d'alimenter en eau une écurie de pur-sang appartenant au chocolatier réputé Albert Menier. Ce détail souligne l'importance de l'eau et de ses infrastructures dans le développement et le soutien des activités humaines de l'époque. Aujourd'hui, le château d'eau a évolué pour devenir un réservoir communal, continuant ainsi à jouer un rôle crucial dans la vie quotidienne de la région.
+Situées à Bavay, les ruines gallo-romaines témoignent d'une époque révolue où l'Empire romain étendait son influence sur la Gaule. Ces ruines, autrefois un forum antique florissant, sont situées place du 11 novembre. Leur importance historique est soulignée par leur classement au titre des monuments historiques le 1er février 2021. Elles représentent un patrimoine archéologique précieux, offrant un aperçu unique de l'urbanisme et de l'architecture gallo-romaine. Bien que les images ne soient pas disponibles, on peut imaginer les vestiges de ce forum, témoignant de la richesse culturelle et historique de la région.
 
-## Villa Marcot, aujourd'hui annexe du collège Jacques-Monod à Compiègne
+## Ancien Groupe Scolaire de la Cité Notre-Dame à Waziers
 
-La Villa Marcot, construite en 1907 par l'architecte Henri Sauvage pour le Commandant Marcot, est un trésor architectural situé à Compiègne. Cette riche maison bourgeoise, caractérisée par son style Art Nouveau, se distingue par sa construction en pierre de taille et brique, ornée de céramiques de Gentil et Bourdet de Boulogne-Billancourt. Bien que l'intérieur ait été altéré par sa transformation en annexe du collège Jacques-Monod, les vitraux de Sauvage dans la cage d'escalier demeurent intacts, témoignant de l'élégance de son époque.
+Situé à Waziers, cet ancien groupe scolaire, aujourd'hui école maternelle Frédéric Chopin et écoles primaires Nicolas Copernic et Marie Curie Sklodowska, est un exemple remarquable d'architecture éducative du début du 20e siècle. Sa conception unique, avec de grands pavillons d'angle pour les salles de cours et les bureaux, reflète l'influence de la population polonaise et la natalité élevée de l'époque. Cet ensemble architectural, inscrit aux monuments historiques le 23 octobre 2009, illustre l'importance de l'éducation dans les communautés minières et sa capacité à s'adapter aux besoins d'une population croissante.
 
-## Eglise Notre-Dame à Lachapelle-sous-Gerberoy
+## Ancien Château des Comtes de Lallaing
 
-Représentant les édifices religieux des 11ème et 12ème siècles, l'Eglise Notre-Dame à Lachapelle-sous-Gerberoy se distingue par sa tour de clocher en pierre de taille, une caractéristique rare pour un bâtiment de cette taille. Le porche occidental, bien que modifié, est un vestige précieux de l'architecture de l'époque. L'attrait principal de cette église réside dans ses remarquables peintures murales du 14ème siècle, offrant un aperçu unique de l'art médiéval dans la région de l'Oise.
+![Pont et porte d’accès sud-ouest du château](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP12R070404/12r070404.jpg)
 
-## Chapelle Sainte-Corneille, dans la forêt de Compiègne
+L'ancien château des comtes de Lallaing, situé dans la ville éponyme, est un site chargé d'histoire remontant au 12e siècle. Initialement une motte castrale, il s'est transformé en une forteresse imposante, témoignant de la puissance et de l'influence de la famille de Lallaing au Moyen Âge. Bien que le château ait subi d'importantes détériorations au fil du temps, notamment pendant les guerres louisquatorziennes du 17e siècle, ses vestiges, notamment la porte et le pont, ont été préservés. Ces éléments sont inscrits aux monuments historiques depuis le 20 octobre 2003, et ils servent aujourd'hui d'entrée au site de l'hôtel de ville et de son parc.
 
-Située dans la forêt de Compiègne, la Chapelle Sainte-Corneille est un édifice d'une grande importance historique. Dépendance de l'abbaye de Saint-Corneille de Compiègne, cette chapelle du 13ème siècle conserve encore aujourd'hui des éléments architecturaux significatifs, malgré sa mutilation partielle. Les murs, la porte principale et certains chapiteaux des colonnettes offrent un témoignage éloquent de l'architecture médiévale et de son évolution au fil des siècles.
+## Ancienne Salle de Gymnastique La Roubaisienne à Roubaix
 
-## Eglise à Berneuil-en-Bray
+![Façade de l'Ancienne Salle de Gymnastique La Roubaisienne](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP12R074036/12r074036.jpg)
 
-![Façade sud de l'Eglise à Berneuil-en-Bray](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP02L08875/sap04_02l08875_p.jpg)
+La salle de gymnastique La Roubaisienne à Roubaix est un remarquable exemple d'architecture sportive du 19e siècle. Construite en 1876, elle présente une structure imposante avec une galerie entourant un vaste espace intérieur et une charpente métallique impressionnante. Inscrite aux monuments historiques le 12 mai 1997, cette salle constitue un rare témoignage de l'architecture sportive de la Troisième République, conservée dans son état d'origine.
 
-L'église de Berneuil-en-Bray, datant du 13ème siècle, présente une architecture impressionnante avec un porche du 16ème siècle. La façade est supportée par de robustes piliers carrés, et l'intérieur abrite des portes en bois sculpté du 17ème siècle. Les fenêtres du mur nord et le chœur reconstruit au 17ème siècle, avec un autel en bois, ajoutent à la splendeur de ce monument. La voûte en berceau, initialement en bois, fut remplacée par du plâtre en 1885, conservant ainsi l'authenticité de l'édifice tout en adaptant ses structures à l'évolution des temps.
+## Lycée Baggio, anciennement Institut Diderot à Lille
 
-## Eglise Saint-Martin à Bulles
+![Façade sud du Lycée Baggio](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP80L073646/80l073646.jpg)
 
-L'Eglise Saint-Martin à Bulles illustre parfaitement l'architecture flamboyante influencée par la Renaissance. Ce bel exemple d'architecture religieuse de la fin du Moyen-Âge et du début de l'époque moderne offre un intérieur sobre et lumineux, avec trois vaisseaux et un chevet plat reconstruit au 17ème siècle. La construction harmonieuse de l'église et son ambiance sereine reflètent la transition stylistique entre le gothique et les premières influences de la Renaissance.
+Le Lycée Baggio, autrefois appelé Institut Diderot, est situé à Lille. Ce monument architectural, construit à partir de 1934 et inauguré en 1938, est l'œuvre des architectes Alleman et Chenal. Sa façade en brique de 158 mètres de long, inscrite partiellement aux monuments historiques le 1er décembre 1997, offre une perspective saisissante avec le jardin des plantes situé en face. Le lycée se distingue par son hall d'entrée décoré de céramiques, luminaires et balustrades, témoignant de l'élégance architecturale du 20e siècle.
 
-## Barrage mobile Derôme de Sarron, Pont-Sainte-Maxence
+## Hôtel de Ville de Dunkerque
 
-![Barrage mobile Derôme de Sarron](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/MHR22_05601527NUCA/mhr22_05601527nuca_p.jpg)
+![Façade est de l'Hôtel de Ville de Dunkerque](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP12R070042/12r070042.jpg)
 
-Le barrage mobile Derôme de Sarron, situé sur la rivière Oise à Pont-Sainte-Maxence, est un exemple remarquable de l'ingénierie du début du 20e siècle. Conçu par l'ingénieur Derôme, ce barrage fait partie d'un ensemble de sept barrages destinés à réguler la hauteur de l'eau pour la navigation sur l'Oise. Sa conception innovante et son importance dans la modernisation de la voie navigable en font un élément clé du patrimoine industriel français.
+L'Hôtel de Ville de Dunkerque, avec son histoire riche et tumultueuse, est un joyau architectural. Le premier bâtiment, érigé en 1233, a subi plusieurs destructions et reconstructions, la plus récente datant du début du 20e siècle. L'architecte Louis-Marie Cordonnier a conçu le bâtiment actuel, inauguré en 1901. Son architecture impressionnante, comprenant un péristyle néo-classique et un beffroi majestueux, en fait un site emblématique. L'édifice a été partiellement inscrit aux monuments historiques en 1989 et 2002. Les travaux de restauration d'après-guerre ont conservé l'essence historique tout en adaptant le bâtiment aux besoins modernes.
 
-## Eglise de Notre-Dame de l'Annonciation, Allonne
+## Eglise Sainte-Cécile de la Cité du Pinson à Raismes
 
-![Eglise de Notre-Dame de l'Annonciation](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/MHR22_05601527NUCA/mhr22_05601527nuca_p.jpg)
+![Façade de l'Église Sainte-Cécile](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP12R073609/12r073609.jpg)
 
-L'Eglise de Notre-Dame de l'Annonciation à Allonne est un trésor architectural s'étendant du 12e au 16e siècle. Son clocher du 12e siècle, le chœur roman et gothique, ainsi que les remarquables peintures murales du 16e siècle, témoignent de l'évolution stylistique et de l'importance historique de cette église. Elle est un exemple fascinant de l'architecture religieuse médiévale en France.
+L'église Sainte-Cécile, située dans la Cité du Pinson à Raismes, a été construite en 1924 par la communauté ouvrière, principalement polonaise, de la région. Après avoir été dévastée par un incendie en 1975, elle a été reconstruite à l'identique, préservant ainsi son importance historique et culturelle. L'église et son presbytère ont été inscrits aux monuments historiques le 1er décembre 2009. Cette église symbolise la résilience et la solidarité d'une communauté face aux épreuves.
 
-## Eglise Saint-Martin, Lierville
+## Gare de Tourcoing
 
-![Eglise Saint-Martin](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/APMH049345/sap01_mh049345_p.jpg)
+![Ensemble nord de la Gare de Tourcoing](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP12R074501/12r074501.jpg)
 
-L'Eglise Saint-Martin de Lierville présente une histoire architecturale complexe, remontant à la fin du 12e siècle. Les modifications et extensions successives, notamment la reconstruction partielle de la nef au 16e siècle, témoignent des changements stylistiques et des besoins de la communauté au fil des siècles. Le clocher, en particulier, avec sa flèche en pierre et sa balustrade, est un exemple remarquable de l'architecture religieuse de la région.
+La gare de Tourcoing, construite en 1905 par l'architecte Sydney Dunnett pour la Compagnie des chemins de fer du Nord, est un exemple remarquable de l'architecture ferroviaire du début du 20e siècle. Inscrite aux monuments historiques le 28 décembre 1984, elle témoigne de l'importance des transports ferroviaires dans le développement industriel et urbain de la région. La gare a subi une rénovation en 1982, alliant préservation du patrimoine et modernisation.
 
-## Eglise Saint-Pierre, Béthisy-Saint-Pierre
+## Bourloire du Cercle Saint-Louis à Leers
 
-![Eglise Saint-Pierre](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP80L014354/sap04_80l014354_p.jpg)
+![Façade de la Bourloire du Cercle Saint-Louis](https://s3.eu-west-3.amazonaws.com/pop-phototeque/memoire/AP12R070418/12r070418.jpg)
 
-L'Eglise Saint-Pierre, originaire du 12e siècle, a subi de nombreuses modifications jusqu'au 16e siècle. Elle se compose d'une abside, d'un chœur, d'une nef et de deux bas-côtés, chacun reflétant les styles architecturaux de différentes époques. Le clocher du 16e siècle, avec sa flèche élancée et sa balustrade décorative, est particulièrement remarquable. Cette église est un témoin précieux de l'évolution de l'architecture ecclésiastique en France.
+La Bourloire du Cercle Saint-Louis à Leers, un vestige unique du patrimoine social et sportif de la fin du 19e siècle, a été construite comme partie d'un patronage. Elle a été inscrite aux monuments historiques le 19 avril 2006, représentant un exemple rare de bourloire, un jeu de boules traditionnel. La bourloire a été complètement restaurée, conservant à la fois son caractère historique et son utilité récréative.
