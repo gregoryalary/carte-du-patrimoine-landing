@@ -1,11 +1,12 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 const { title, description, schema, image } = Astro.props;
 ---
 
-<html lang="fr">
+<html lang="fr" transition:animate="fade">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
@@ -52,6 +53,8 @@ const { title, description, schema, image } = Astro.props;
                 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
             </script>
         )}
+
+        <ViewTransitions />
 	</head>
 	<body>
         <Header />
