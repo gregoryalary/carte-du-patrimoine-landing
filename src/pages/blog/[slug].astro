@@ -1,13 +1,12 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import { Image, getImage } from 'astro:assets';
-
 import Layout from "../../components/Layout.astro";
 import PostDate from "../../components/blog/PostDate.astro";
 import PostDownloadCta from "../../components/blog/PostDownloadCta.astro";
+import { getAllPosts } from "../../lib/cosmic";
+import { type Post } from "../../lib/content.type"
 
 export const getStaticPaths = async () => {
-  const posts = await getCollection("posts");
+  const posts = await getAllPosts();
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
@@ -15,49 +14,46 @@ export const getStaticPaths = async () => {
 };
 
 type Props = {
-  post: CollectionEntry<"posts">;
+  post: Post;
 };
 
 const { post } = Astro.props;
-const { Content } = await post.render();
 
-const relatedPosts = (await getCollection('posts'))
+const relatedPosts = (await getAllPosts())
   .filter(p => p.slug !== post.slug)
   .sort(() => Math.random())
   .slice(0, 3);
 ---
 
 <Layout
-  title={post.data.title}
-  description={post.data.description}
-  image={`https://carte-du-patrimoine.gregoryalary.dev${(await getImage({src: post.data.image})).src}`}
+  title={post.title}
+  description={post.description}
+  image={`${post.image}?h=630&w=1200`}
   schema={{
     "@context": "https://schema.org/",
     "@type": "BlogPosting",
-    name: post.data.title,
-    genre: "Tourism",
+    name: post.title,
     url: Astro.url,
-    description: post.data.description,
-    datePublished: post.data.publishedAt,
+    description: post.description,
+    datePublished: post.publishedAt.toISOString(),
   }}
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h1 class="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight lg:text-4xl lg:leading-snug" transition:name={`post-title-${post.id}`}>
-      {post.data.title}
+    <h1 class="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight lg:text-4xl lg:leading-snug" transition:name={`post-title-${post.slug}`}>
+      {post.title}
     </h1>
 
     <div class="mt-3 flex justify-center space-x-3 text-gray-500 ">
-      <div class="flex items-center space-x-2 text-sm" transition:name=`post-date-${post.id}`>
+      <div class="flex items-center space-x-2 text-sm" transition:name=`post-date-${post.slug}`>
         <PostDate className="text-gray-500" post={post} />
       </div>
     </div>
   </div>
 
-  <div class="mt-8 flex justify-center z-0 mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
-    <Image
-      src={post.data.image}
-      alt={post.data.title}
-      width={1024}
+  <div class="mt-8 flex justify-center z-0 mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg bg-gray-100">
+    <img
+      src={`${post.image}?w=1023&ar=16:9&fit=crop`}
+      alt={post.title}
       loading="eager"
       sizes="100vw"
       class="object-cover rounded bg-gray-100"
@@ -70,7 +66,7 @@ const relatedPosts = (await getCollection('posts'))
     <div class="flex max-w-screen-xl flex-col gap-12 px-5 md:flex-row">
       <article class="flex-1 md:pt-10">
         <div class="prose mb-3 pb-5 max-w-none prose-img:rounded-xl">
-          {post.data.showLegalNotice && (
+          {post.showLegalDisclaimer && (
             <div class="bg-orange-100 border-l-4 border-orange-200 px-4 py-3 text-orange-500 rounded-r-lg" role="alert">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
@@ -81,11 +77,10 @@ const relatedPosts = (await getCollection('posts'))
             </div>
           )}
 
-
-          <Content />
+          <div set:html={post.content} />
         </div>
 
-        {post.data.showPopCopyrights && (
+        {post.showPopCopyrights && (
           <div class="bg-blue-100 border-l-4 border-blue-200 px-4 py-3 text-blue-500 rounded-r-lg" role="alert">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
@@ -108,22 +103,21 @@ const relatedPosts = (await getCollection('posts'))
           <div class="grid gap-6 mt-6">
             <a href={`/blog/${relatedPost.slug}`}>
               <div class="flex gap-5">
-                <div class="relative w-24 overflow-hidden rounded-md shrink-0 bg-gray-100">
-                  <Image
-                    quality="high"
-                    width="194"
-                    src={relatedPost.data.image}
-                    alt={relatedPost.data.title}
-                    sizes="100vw"
+                <div class="relative w-24 overflow-hidden rounded-md shrink-0 bg-gray-100"  transition:name={`post-image-${relatedPost.slug}`}>
+                  <img
+                    src={`${relatedPost.image}?h=100`}
+                    alt={relatedPost.title}
                     class="object-cover absolute h-full w-full"
                     loading="lazy"
                   />
                 </div>
                 <div>
-                  <h3 class="font-medium">
-                    {relatedPost.data.title}
+                  <h3 class="font-medium" transition:name={`post-title-${relatedPost.slug}`}>
+                    {relatedPost.title}
                   </h3>
-                  <PostDate post={relatedPost} className="mt-2 text-sm text-gray-500" />
+                  <span transition:name={`post-date-${relatedPost.slug}`}>
+                    <PostDate post={relatedPost} className="mt-2 text-sm text-gray-500" />
+                  </span>
                 </div>
               </div>
             </a>

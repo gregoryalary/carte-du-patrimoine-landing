@@ -1,17 +1,16 @@
 ---
-import { type CollectionEntry } from "astro:content";
-
+import type { Post } from "../../lib/content.type";
 import {formatDateForHuman, formatDateForBrowser} from "../../utils/date.util";
 
 type Props = {
-    post: CollectionEntry<"posts">,
+    post: Post,
     className: string,
 };
 
 const { post, className } = Astro.props;
 ---
 
-<time class={className} datetime={formatDateForBrowser(post.data.publishedAt)}>
-    {formatDateForHuman(post.data.publishedAt)}
+<time class={className} datetime={formatDateForBrowser(post.publishedAt)}>
+    {formatDateForHuman(post.publishedAt)}
 </time>
 
