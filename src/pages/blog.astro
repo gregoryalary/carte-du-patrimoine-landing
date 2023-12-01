@@ -7,7 +7,9 @@ import PostDate from "../components/blog/PostDate.astro";
 
 const posts = await getAllPosts();
 
-posts.sort((a, b) => b.publishedAt.getDate() - a.publishedAt.getDate());
+console.log(posts.map(e => ({ d: typeof e.publishedAt.getDate(), n: e.title })));
+
+posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
 ---
 
 <Layout title="Le blog" description="Blog" image={`https://carte-du-patrimoine.gregoryalary.dev${TwitterCardImage.src}`}>
