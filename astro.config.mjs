@@ -7,5 +7,8 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   compressHTML: true,
-  site: 'https://carte-du-patrimoine.gregoryalary.dev'
+  site: 'https://carte-du-patrimoine.gregoryalary.dev',
+  redirects: {
+    '/blog/panneaux-monuments-historiques-tout-ce-qu-il-faut-savoir/': '/blog/tout-savoir-sur-les-panneaux-monument-historique/'
+  },
 });
