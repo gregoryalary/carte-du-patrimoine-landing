@@ -1,5 +1,5 @@
 ---
-import Layout from "../../components/Layout.astro";
+import Layout from "../../components/layout/Layout.astro";
 import PostDate from "../../components/blog/PostDate.astro";
 import PostDownloadCta from "../../components/blog/PostDownloadCta.astro";
 import { getAllPosts } from "../../lib/cosmic";
@@ -56,7 +56,7 @@ const relatedPosts = (await getAllPosts())
       alt={post.title}
       loading="eager"
       sizes="100vw"
-      class="object-cover rounded bg-gray-100"
+      class="object-cover lg:rounded bg-gray-100"
     />
   </div>
 
@@ -65,13 +65,13 @@ const relatedPosts = (await getAllPosts())
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8 md:mt-0">
     <div class="flex max-w-screen-xl flex-col gap-12 px-5 md:flex-row">
       <article class="flex-1 md:pt-10">
-        <div class="prose mb-3 pb-5 max-w-none prose-img:rounded-xl">
+        <div class="prose mb-3 pb-5 max-w-none prose-img:rounded-xl prose-a:text-[#a76136]">
           {post.showLegalDisclaimer && (
-            <div class="bg-orange-100 border-l-4 border-orange-200 px-4 py-3 text-orange-500 rounded-r-lg" role="alert">
+            <div class="bg-orange-50 border-l-4 border-orange-200 px-4 py-3 text-orange-500 rounded-r-lg" role="alert">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
               </svg>          
-              <p class="text-gray-500 text-sm mb-0 mt-3">
+              <p class="text-gray-600 text-sm mb-0 mt-3">
                 Veuillez noter que les informations fournies dans cet article le sont à des fins informatives uniquement et ne constituent pas un conseil juridique. Pour obtenir des conseils juridiques spécifiques, il est recommandé de consulter un professionnel qualifié.
               </p>
             </div>
@@ -81,11 +81,11 @@ const relatedPosts = (await getAllPosts())
         </div>
 
         {post.showPopCopyrights && (
-          <div class="bg-blue-100 border-l-4 border-blue-200 px-4 py-3 text-blue-500 rounded-r-lg" role="alert">
+          <div class="bg-blue-50 border-l-4 border-blue-200 px-4 py-3 text-blue-500 rounded-r-lg" role="alert">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
             </svg>          
-            <p class="text-gray-500 text-sm mb-0 mt-3">
+            <p class="text-gray-600 text-sm mb-0 mt-3">
               Les photographies présentées dans cet article sont issues de la <a href="https://www.pop.culture.gouv.fr/" class="font-bold underline">Plateforme ouverte du patrimoine (POP)</a> du ministère de la Culture français.<br/>Les images utilisées ici, sous droits d'auteur, visent à enrichir le contenu de l'article.
             </p>
           </div>

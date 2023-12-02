@@ -1,0 +1,27 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import LayoutSeoMetatags from './LayoutSeoMetatags.astro';
+import LayoutInlineScripts from './LayoutInlineScripts.astro';
+
+const { title, description, schema, image } = Astro.props;
+---
+
+<html lang="fr" transition:animate="fade">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+        <LayoutSeoMetatags {...{ title, description, schema, image }}/>
+        <LayoutInlineScripts/>
+        <ViewTransitions/>
+	</head>
+	<body>
+        <Header />
+        <main class="flex-auto">
+            <slot />
+        </main>
+        <Footer />
+	</body>
+</html>

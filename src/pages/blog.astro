@@ -2,7 +2,7 @@
 import { getAllPosts } from '../lib/cosmic';
 
 import TwitterCardImage from '../images/twitter-card.png';
-import Layout from "../components/Layout.astro";
+import Layout from "../components/layout/Layout.astro";
 import PostDate from "../components/blog/PostDate.astro";
 
 const posts = await getAllPosts();
@@ -22,7 +22,7 @@ posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
       </p>
 
       <div class="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
-        {posts.map(post => (
+        {posts.map((post, index) => (
           <div class="group cursor-pointer">
             <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105">
               <a href={`/blog/${post.slug}`}>
@@ -30,7 +30,7 @@ posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
                   src={`${post.image}?h=300&ar=16:9&fit=crop`}
                   alt={post.title}
                   class="object-cover transition-all h-full w-full transparent aspect-[16/9]"
-                  loading="lazy"
+                  loading={index <= 2 ? "eager" : "lazy"}
                 />
               </a>
             </div>
