@@ -13,8 +13,8 @@ const { title, description, schema, image } = Astro.props;
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+        <style is:inline>@keyframes spin-reverse{to{transform:rotate(-1turn)}}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin-reverse-slow{animation:4s linear infinite spin-reverse}.animate-spin-reverse-slower{animation:6s linear infinite spin-reverse}.animate-spin-slow{animation:4s linear infinite spin}.animate-spin-slower{animation:6s linear infinite spin}</style>
         <LayoutSeoMetatags {...{ title, description, schema, image }}/>
-        <LayoutInlineScripts/>
         <ViewTransitions/>
 	</head>
 	<body>
@@ -23,5 +23,6 @@ const { title, description, schema, image } = Astro.props;
             <slot />
         </main>
         <Footer />
+        <LayoutInlineScripts/>
 	</body>
 </html>

@@ -52,11 +52,20 @@ const relatedPosts = (await getAllPosts())
 
   <div class="mt-8 flex justify-center z-0 mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg bg-gray-100">
     <img
-      src={`${post.image}?w=1023&ar=16:9&fit=crop`}
+      src={`${post.image}?w=1024&ar=16:9&fit=crop`}
+      srcset={[
+        `${post.image}?w=425&ar=16:9&fit=crop 425vw`,
+        `${post.image}?w=750&ar=16:9&fit=crop 750vw`,
+        `${post.image}?w=1024&ar=16:9&fit=crop 1024vw`
+      ].join(',')}
+      sizes={[
+        '(max-width: 425px) 425px',
+        '(max-width: 750px) 750px',
+        '1024px'
+      ].join(',')}
       alt={post.title}
       loading="eager"
-      sizes="100vw"
-      class="object-cover lg:rounded bg-gray-100"
+      class="object-cover lg:rounded bg-gray-100 aspect-16/9"
     />
   </div>
 
