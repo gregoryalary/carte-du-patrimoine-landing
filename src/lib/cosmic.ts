@@ -7,18 +7,34 @@ const cosmic = createBucketClient({
 });
 
 export const getAllPosts = async (): Promise<Post[]> => {
-  const data = await cosmic.objects
+  const genericPosts = await cosmic.objects
     .find({ type: 'posts' })
     .props(['slug', 'title', 'metadata'].join(','));
 
-  return data.objects.map((object: any): Post => ({
-    slug: object.slug,
-    title: object.title,
-    description: object.metadata.description,
-    publishedAt: new Date(object.metadata.published_at),
-    content: object.metadata.content,
-    image: object.metadata.image.imgix_url,
-    showLegalDisclaimer: object.metadata.show_legal_disclaimer,
-    showPopCopyrights: object.metadata.show_pop_copyrights,
-  }));
+  const oneMonumentADayPosts = await cosmic.objects
+    .find({ type: 'one-monument-a-day-posts' })
+    .props(['slug', 'title', 'metadata'].join(','));
+
+  return [
+    ...genericPosts.objects.map((object: any): Post => ({
+      slug: object.slug,
+      title: object.title,
+      description: object.metadata.description,
+      publishedAt: new Date(object.metadata.published_at),
+      content: object.metadata.content,
+      image: object.metadata.image.imgix_url,
+      showLegalDisclaimer: object.metadata.show_legal_disclaimer,
+      showPopCopyrights: object.metadata.show_pop_copyrights,
+    })),
+    ...oneMonumentADayPosts.objects.map((object: any): Post => ({
+      slug: object.slug,
+      title: object.title,
+      description: object.metadata.description,
+      publishedAt: new Date(object.metadata.published_at),
+      content: object.metadata.content,
+      image: object.metadata.image,
+      showLegalDisclaimer: false,
+      showPopCopyrights: true,
+    })),
+  ];
 };
