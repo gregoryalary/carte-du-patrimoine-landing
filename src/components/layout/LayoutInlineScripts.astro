@@ -1,9 +1,0 @@
----
-const isProduction = import.meta.env.MODE === 'production';
----
-
-{isProduction && (
-    <script is:inline async defer src="https://www.googletagmanager.com/gtag/js?id=G-FY8BQ8LNLY"></script>
-    <script is:inline>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-FY8BQ8LNLY');</script>
-    <script is:inline>!function(t,h,j,s,e,n){t.hj=t.hj||function(){(t.hj.q=t.hj.q||[]).push(arguments)},t._hjSettings={hjid:3722975,hjsv:6},e=h.getElementsByTagName("head")[0],(n=h.createElement("script")).async=1,n.src=j+t._hjSettings.hjid+s+t._hjSettings.hjsv,e.appendChild(n)}(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv=");</script>
-)}

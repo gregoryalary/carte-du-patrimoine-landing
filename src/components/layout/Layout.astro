@@ -3,7 +3,6 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 import LayoutSeoMetatags from './LayoutSeoMetatags.astro';
-import LayoutInlineScripts from './LayoutInlineScripts.astro';
 
 const { title, description, schema, image } = Astro.props;
 ---
@@ -23,6 +22,5 @@ const { title, description, schema, image } = Astro.props;
             <slot />
         </main>
         <Footer />
-        <LayoutInlineScripts/>
 	</body>
 </html>
