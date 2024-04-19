@@ -5,6 +5,7 @@ import PostDownloadCta from "../../components/blog/PostDownloadCta.astro";
 import { getAllPosts } from "../../lib/cosmic";
 import { type Post } from "../../lib/content.type"
 
+
 export const getStaticPaths = async () => {
   const posts = await getAllPosts();
   return posts.map((post) => ({
