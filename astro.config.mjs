@@ -9,6 +9,8 @@ export default defineConfig({
   compressHTML: true,
   site: 'https://carte-du-patrimoine.gregoryalary.dev',
   redirects: {
+    '/qr/': '/',
+    '/blog/': '/blog/1/',
     '/blog/panneaux-monuments-historiques-tout-ce-qu-il-faut-savoir/': '/blog/tout-savoir-sur-les-panneaux-monument-historique/'
   },
 });
