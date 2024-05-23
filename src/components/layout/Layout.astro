@@ -4,7 +4,7 @@ import Footer from './Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 import LayoutSeoMetatags from './LayoutSeoMetatags.astro';
 
-const { title, description, schema, image } = Astro.props;
+const { title, description, schema, image, isQr = false } = Astro.props;
 ---
 
 <html lang="fr" transition:animate="fade">
@@ -15,9 +15,18 @@ const { title, description, schema, image } = Astro.props;
         <style is:inline>@keyframes spin-reverse{to{transform:rotate(-1turn)}}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin-reverse-slow{animation:4s linear infinite spin-reverse}.animate-spin-reverse-slower{animation:6s linear infinite spin-reverse}.animate-spin-slow{animation:4s linear infinite spin}.animate-spin-slower{animation:6s linear infinite spin}</style>
         <LayoutSeoMetatags {...{ title, description, schema, image }}/>
         <ViewTransitions/>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FY8BQ8LNLY" is:inline></script>
+        <script is:inline>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-FY8BQ8LNLY');
+        </script>
 	</head>
 	<body>
-        <Header />
+        {!isQr && (<Header />)}
         <main class="flex-auto">
             <slot />
         </main>
