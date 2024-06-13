@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: 
+Disallow: /qr.html
+Disallow: /qr-2.html
 
 Sitemap: https://www.carte-du-patrimoine.com/sitemap-index.xml
