@@ -11,6 +11,7 @@ export default defineConfig({
   redirects: {
     '/qr/': 'https://mh-map-api.gregoryalary.xyz/api/qr',
     '/qr-2/': 'https://mh-map-api.gregoryalary.xyz/api/qr',
+    '/monlet': 'https://mh-map-api.gregoryalary.xyz/api/qr?town_code=43138',
     '/blog/': '/blog/1/',
     '/blog/panneaux-monuments-historiques-tout-ce-qu-il-faut-savoir/': '/blog/tout-savoir-sur-les-panneaux-monument-historique/'
   },
