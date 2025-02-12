@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 
 import HomeHeroSpinner from "../home/HomeHeroSpinner.astro";
-import PlayStoreImage from "../layout/PlayStoreImage.astro";
 
 import HeroImage from "../../images/hero.png";
 import FeatureImage from "../../images/feature.png";
@@ -10,28 +9,32 @@ import FeatureImage from "../../images/feature.png";
 
 <div class="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 mt-8">
   <a href="/" target="_blank">
-    <div class="rounded-xl bg-[#a76136] overflow-hidden hover:shadow-2xl transition-all duration-250">
+    <div class="rounded-xl bg-surface-lighter overflow-hidden hover:shadow-2xl transition-all duration-250 border border-surface-dark">
       <div class="overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px pt-8">
           <div class="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
             <div class="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-              <h2 class="text-4xl font-medium tracking-tight text-neutral-50 text-center lg:text-left">
+              <h2 class="text-4xl font-bold tracking-tight text-text-darker text-center lg:text-left">
+                Carte du Patrimoine
+              </h2>
+
+              <h2 class="text-2xl mt-4 font-medium tracking-tight text-text-darker text-center lg:text-left">
                 L'application pour découvrir les Monuments Historiques français
               </h2>
 
               <div class="grid mt-8 gap-8 hidden md:flex justify-center lg:justify-start">
                 <div class="flex flex-col items-center lg:items-start">
-                  <span class="text-3xl font-medium tracking-tight text-neutral-50 font-bold">45.000+</span>
-                  <span class="mt-2 text-lg text-neutral-50">Monuments repertoriés</span>
+                  <span class="text-3xl font-medium tracking-tight text-text-darker font-bold">45.000+</span>
+                  <span class="mt-2 text-lg text-text-darker">Monuments repertoriés</span>
                 </div>
                 <div class="flex flex-col items-start items-center lg:items-start">
-                  <span class="text-3xl font-medium tracking-tight text-neutral-50 font-bold">200.000+</span>
-                  <span class="mt-2 text-lg text-neutral-50">Images disponibles</span>
+                  <span class="text-3xl font-medium tracking-tight text-text-darker font-bold">200.000+</span>
+                  <span class="mt-2 text-lg text-text-darker">Images disponibles</span>
                 </div>
               </div>
             </div>
             <div class="relative mt-10 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
-              <HomeHeroSpinner isCta />
+              <HomeHeroSpinner />
               <div class={`-mx-4 h-[350px] sm:mx-0`}>
                 <div class="relative mx-auto flex flex-row justify-center lg:justify-end gap-8">
                   <Image
