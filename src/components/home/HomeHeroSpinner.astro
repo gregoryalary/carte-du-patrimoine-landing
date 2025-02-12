@@ -1,11 +1,3 @@
----
-type Props = {
-    isCta?: boolean;
-}
-
-const { isCta = false }: Props = Astro.props;
----
-
 <div class="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0">
     <svg
         viewBox="0 0 1026 1026"
@@ -33,8 +25,8 @@ const { isCta = false }: Props = Astro.props;
                 y2="1025"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stop-color={isCta ? "white" : "#C67C4E"}></stop>
-                <stop offset="1" stop-color={isCta ? "white" : "#C67C4E"} stop-opacity="0"></stop>
+                <stop stop-color="#C67C4E"></stop>
+                <stop offset="1" stop-color="#C67C4E" stop-opacity="0"></stop>
             </linearGradient>
         </defs>
     </svg>
@@ -64,8 +56,8 @@ const { isCta = false }: Props = Astro.props;
                 y2="913"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stop-color={isCta ? "white" : "#C67C4E"}></stop>
-                <stop offset="1" stop-color={isCta ? "white" : "#C67C4E"} stop-opacity="0"></stop>
+                <stop stop-color="#C67C4E"></stop>
+                <stop offset="1" stop-color="#C67C4E" stop-opacity="0"></stop>
             </linearGradient>
         </defs>
     </svg>

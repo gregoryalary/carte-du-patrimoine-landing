@@ -17,19 +17,20 @@ const partners = [
     href: "https://www.pont-valentre.com",
   },
   {
-    name: "Castet de Sainte-Christie d’Armagnac",
+    name: "Castet de Sainte-Christie d'Armagnac",
     href: "https://saintechristiedarmagnac.fr/presentation-du-site/",
   },
+
 ];
 ---
 
-<section id="faq" class="py-20 sm:py-32">
+<section id="faq" class="py-20 sm:py-32 bg-surface-lighter border-t border-b border-surface-dark">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0 ">
-      <h2 class="text-3xl font-medium tracking-tight text-gray-900">
+    <div class="mx-auto max-w-2xl lg:mx-0 space-y-4">
+      <h2 class="text-3xl font-medium tracking-tight text-text-darker">
         Nos partenaires
       </h2>
-      <p class="mt-2 text-lg text-gray-600">
+      <p class="mt-2 text-lg text-text-darker">
         Merci à tous les partenaires de Carte du Patrimoine pour leur implication !
       </p>
     </div>
@@ -37,7 +38,9 @@ const partners = [
       {partners.map(partner => (
         <li>
           <a href={partner.href} target="_blank">
-            <h3 class="text-lg font-semibold leading-6 text-gray-900 hover:text-[#a76136]">{partner.name}</h3>
+            <h3 class="text-lg font-semibold leading-6 text-text-darker hover:text-primary duration-250 transition-colors">
+              {partner.name}
+            </h3>
           </a>
         </li>
       ))}
