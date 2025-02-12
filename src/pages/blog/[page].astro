@@ -27,13 +27,11 @@ const { page } = Astro.props;
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="pb-8 pt-6">
-      <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:leading-10 md:leading-14"
-      >
+      <h1 class="text-3xl font-extrabold leading-9 tracking-tight text-text-darker sm:leading-10 md:leading-14">
         Le blog de Carte du Patrimoine
       </h1>
 
-      <p class="mt-6 text-lg leading-7 text-gray-500">
+      <p class="mt-6 text-lg leading-7 text-text-darker">
         Bienvenue sur le blog de Carte du Patrimoine, votre guide pratique pour
         découvrir les Monuments Historiques français.
       </p>
@@ -42,7 +40,7 @@ const { page } = Astro.props;
         {
           page.data.map((post, index) => (
             <div class="group cursor-pointer">
-              <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105">
+              <div class="overflow-hidden rounded-md bg-surface-dark transition-all hover:scale-105">
                 <a href={`/blog/${post.slug}`}>
                   <img
                     src={`${post.image}?h=300&ar=16:9&fit=crop`}
@@ -54,17 +52,17 @@ const { page } = Astro.props;
               </div>
               <div>
                 <h2
-                  class="text-lg normal line-clamp-2 font-medium  tracking-normal text-black mt-2"
+                  class="text-lg normal line-clamp-2 font-medium tracking-normal text-black mt-2"
                   transition:name={`post-title-${post.slug}`}
                 >
                   <a href={`/blog/${post.slug}`}>
-                    <span class="bg-gradient-to-r from-amber-200 to-amber-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                    <span class="bg-gradient-to-r from-primary-light to-primary-light bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
                       {post.title}
                     </span>
                   </a>
                 </h2>
                 <div
-                  class="mt-3 flex items-center space-x-3 text-gray-500"
+                  class="mt-2 flex items-center space-x-3 text-text-dark"
                   transition:name={`post-date-${post.slug}`}
                 >
                   <PostDate className="truncate text-sm" post={post} />
@@ -84,20 +82,20 @@ const { page } = Astro.props;
             page.url.prev && (
               <a
                 href={page.url.prev}
-                class="relative inline-flex items-center gap-1 rounded border border-gray-300 bg-white px-3 py-2 pr-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+                class="relative inline-flex items-center gap-1 rounded border border-surface-dark bg-surface-lighter px-3 py-2 pr-4 text-sm font-medium text-text-dark hover:text-primary duration-250 transition-colors"
               >
                 <span>← Précédent</span>
               </a>
             )
           }
 
-          <span>Page {page.currentPage} / {page.lastPage}</span>
+          <span class="text-text-darker">Page {page.currentPage} / {page.lastPage}</span>
 
           {
             page.url.next && (
               <a
                 href={page.url.next}
-                class="relative inline-flex items-center gap-1 rounded border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+                class="relative inline-flex items-center gap-1 rounded border border-surface-dark bg-surface-lighter px-3 py-2 pr-4 text-sm font-medium text-text-dark hover:text-primary duration-250 transition-colors"
               >
                 <span>Suivant →</span>
               </a>
