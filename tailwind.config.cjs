@@ -24,6 +24,9 @@ module.exports = {
 					darker: "#272A34",
 					light: "#FCFAF8",
 				},
+				android: {
+					DEFAULT: "#31A051",
+				},
 			},
 		},
 	},

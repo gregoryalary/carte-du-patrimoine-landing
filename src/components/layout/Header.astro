@@ -8,24 +8,21 @@ import AppIconImage from '../../images/app-icon.png'
   <nav>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-50 flex justify-between py-8">
       <div class="relative z-10 flex items-center gap-16">
-        <a href="/" class="flex flex-row items-center space-x-2">
+        <a href="/" class="flex flex-row items-center gap-4">
           <Image src={AppIconImage} width={60} height={60} alt="Icône de l'application Carte du Patrimoine" class="h-10 w-auto"/>
-          <span class="text-gray-900 font-semibold">
+          <span class="text-text-darker font-semibold">
             Carte du Patrimoine
           </span>
         </a>
         <div class="flex gap-4 lg:gap-10">
-          <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-0" href="/#fonctionnalites">
-              <span class="relative z-10">Fonctionnalités</span>
-          </a>
-          {/*
-            <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-0" href="/#faq">
-              <span class="relative z-10">FAQ</span>
+          {[
+            { href: '/#fonctionnalites', text: 'Fonctionnalités' },
+            { href: '/blog', text: 'Blog' }
+          ].map(link => (
+            <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-text-darker transition-colors duration-250 hover:text-primary" href={link.href}>
+              <span class="relative z-10">{link.text}</span>
             </a>
-          */}
-          <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-0" href="/blog">
-            <span class="relative z-10">Blog</span>
-          </a>
+          ))}
         </div>
       </div>
     </div>
